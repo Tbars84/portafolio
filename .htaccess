@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_HOST} ^www\.wedesign-medellin\.com$
+RewriteRule ^/?$ "http\:\/\/wedesign-medellin\.com\/" [R=301,L]
