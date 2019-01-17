@@ -1,0 +1,72 @@
+// IMPORTAR FUENTES
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,700');
+
+$font-oswald: 'Oswald', sans-serif;
+$font-fira: 'Fira Sans Condensed', sans-serif;
+
+$offset: 0.8em;
+:root {
+  --black: #000000;
+  --dark: #171717;
+  --light: #D3D3D3;
+  --blue: #1A82B5;
+  --darkBlue: #0F4763;
+  --lightBlue: #178BE3;
+  --green: #56FFD2;
+  --darkGreen: #47D1AC;
+  --lightGreen: #74FFDA;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: var(--dark);
+  font-size: 18px;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  min-height: 95vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p.bold{
+  font-weight: 500;
+}
+
+@-webkit-keyframes opacidad {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1
+  }
+  30% {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1
+  }
+  40% {
+    transform: translate3d(0px, 15px, 80px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1
+  }
+  60% {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1
+  }
+  80% {
+    transform: translate3d(0px, 15px, 80px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1
+  }
+}

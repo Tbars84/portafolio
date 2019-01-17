@@ -1,0 +1,46 @@
+@import '../../../../variables';
+
+.inicio-contendor{
+  text-align: center;
+  width: auto;
+  min-width: 50%;
+  position: relative;
+  .logo {
+    min-width: 320px;
+    width: 60%;
+    display: table-cell;
+  }
+  .descripcion{
+    text-align: left;
+    font-family: $font-oswald;
+    line-height: 1.7em;
+    padding: $offset 0 0 0.5em;
+    color: var(--dark);
+    position: relative;
+    &.offset{
+      padding-left: 12%;
+      ::before{
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        top: $offset;
+        left: -2%;
+        background: var(--lightBlue);
+      }
+    }
+    span {
+      color: var(--lightBlue);
+      font-size: 1.1em;
+    }
+  }
+  .btn-scroll {
+    position: absolute;
+    cursor: pointer;
+    min-width: 65px;
+    right: 0;
+    top: 120%;
+    animation: opacidad 4s infinite;
+  }
+}
+

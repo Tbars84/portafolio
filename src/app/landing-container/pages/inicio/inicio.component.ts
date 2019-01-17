@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
+  turnScroll = true;
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
