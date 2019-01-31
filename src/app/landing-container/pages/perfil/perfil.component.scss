@@ -1,9 +1,10 @@
 @import '../../../../variables';
 
-section.section-1{
+section.section-1,
+section.section-2 {
   background: var(--lightBlue);
 }
-.perfil-contenedor{
+.perfil-contenedor {
     min-width: 90%;
     padding-top: 10%;
     display: flex;
@@ -25,14 +26,21 @@ section.section-1{
         align-self: center;
       }
 
-      h1, p{
+      h1, p, h2{
         color: var(--white);
         font-family: $font-fira;
         font-size: 1em;
       }
-      h1{
+      h1, h2 {
         font-family: $font-oswald;
         font-size: 2em;
+      }
+      &.invertido{
+        order: 2;
+        h2 ,p {
+          text-align: right;
+        }
+
       }
     }
     .contenedor--imagen{
@@ -50,6 +58,18 @@ section.section-1{
           width: 680px;
         }
       }
+      &.invertido {
+        order: 1;
+        padding: 0;
+        img {
+          @include tablet {
+            width: 380px;
+          }
+        }
+      }
+    }
+    &.desc {
+      padding-top: 0%;
     }
 }
 .perfil-bg{
@@ -74,5 +94,30 @@ section.section-1{
         display: none;
       }
     }
-
+}
+section.section-2{
+  align-items: flex-start;
+}
+img.perfil-bg-desc {
+    position: absolute;
+    width: auto;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+    display: none;
+    &.movil {
+      display: block;
+      max-width: 55%;
+      // top: -11px;
+    }
+    @include tablet {
+      max-width: 60vw;
+      &.desktop {
+        display: block;
+        bottom: -1px;
+      }
+      &.movil {
+        display: none;
+      }
+    }
 }

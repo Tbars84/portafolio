@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { LandingHome } from './main-components/landing-home/landing-home.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { HabilidadesComponent } from './pages/habilidades/habilidades.component';
 
 @NgModule({
   declarations: [
     LandingHome,
     InicioComponent,
-    PerfilComponent
+    PerfilComponent,
+    HabilidadesComponent
   ],
   imports: [
     CommonModule
