@@ -1,0 +1,78 @@
+@import '../../../../variables';
+
+section.section-1{
+  background: var(--lightBlue);
+}
+.perfil-contenedor{
+    min-width: 90%;
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 48%;
+    flex-shrink: 1;
+    @include desktop {
+      flex-direction: row;
+    }
+    .contenedor--info{
+      @include tablet {
+        max-width: 60%;
+        align-self: flex-start;
+      }
+      @include desktopLg {
+        max-width: 60%;
+        align-self: center;
+      }
+
+      h1, p{
+        color: var(--white);
+        font-family: $font-fira;
+        font-size: 1em;
+      }
+      h1{
+        font-family: $font-oswald;
+        font-size: 2em;
+      }
+    }
+    .contenedor--imagen{
+      position: relative;
+      @include tablet {
+        padding-top: 12%;
+      }
+      img{
+        display: block;
+        z-index: 99;
+        position: relative;
+        padding: 0 5%;
+        width: 250px;
+        @include tablet {
+          width: 680px;
+        }
+      }
+    }
+}
+.perfil-bg{
+    position: absolute;
+    width: auto;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    display: none;
+    &.movil {
+      display: block;
+      max-width: 55%;
+      top: -11px;
+    }
+    @include tablet {
+      max-width: 60vw;
+      &.desktop{
+        display: block;
+        top: -1px;
+      }
+      &.movil {
+        display: none;
+      }
+    }
+
+}

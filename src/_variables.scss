@@ -10,6 +10,7 @@ $offset: 0.8em;
   --black: #000000;
   --dark: #171717;
   --light: #D3D3D3;
+  --white: #FFFFFF;
   --blue: #1A82B5;
   --darkBlue: #0F4763;
   --lightBlue: #178BE3;
@@ -17,16 +18,41 @@ $offset: 0.8em;
   --darkGreen: #47D1AC;
   --lightGreen: #74FFDA;
 }
+// MIXINS PARA RESPONSIVE
+$tablet: 768px;
+$desktop: 1024px;
+$desktopLg: 1260px;
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content ;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin desktopLg {
+  @media (min-width: #{$desktopLg}) {
+    @content;
+  }
+}
+
+
 
 html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   position: relative;
+  font-size: 15px;
   color: var(--dark);
-  font-size: 18px;
+  @include tablet {
+    font-size: 18px;
+  }
 }
-
 section {
   width: 100%;
   height: auto;
@@ -35,6 +61,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  &.al-right{
+    justify-content: flex-end;
+  }
+  &.al-left {
+    justify-content: flex-start;
+  }
+
 }
 p.bold{
   font-weight: 500;

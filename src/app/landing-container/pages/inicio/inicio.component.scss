@@ -1,46 +1,83 @@
 @import '../../../../variables';
 
-.inicio-contendor{
-  text-align: center;
-  width: auto;
-  min-width: 50%;
-  position: relative;
-  .logo {
-    min-width: 320px;
-    width: 60%;
-    display: table-cell;
-  }
-  .descripcion{
-    text-align: left;
-    font-family: $font-oswald;
-    line-height: 1.7em;
-    padding: $offset 0 0 0.5em;
-    color: var(--dark);
+.section-0{
+  .inicio-contendor{
+    text-align: center;
     position: relative;
-    &.offset{
-      padding-left: 12%;
-      ::before{
-        content: '';
-        position: absolute;
-        width: 40%;
-        height: 2px;
-        top: $offset;
-        left: -2%;
-        background: var(--lightBlue);
+    width: 90%;
+    margin: 0 5%;
+    @include tablet {
+      width: auto;
+      margin: unset;
+    }
+    @include desktop {
+      min-width: 50%;
+      width: auto;
+    }
+
+    .logo {
+      min-width: 280px;
+      @include tablet {
+        min-width: 320px;
+      }
+      @include desktop {
+        width: 60%;
       }
     }
-    span {
-      color: var(--lightBlue);
-      font-size: 1.1em;
+    .descripcion{
+      text-align: left;
+      font-family: $font-oswald;
+      line-height: 1.7em;
+      padding: $offset 0 0 0.5em;
+      color: var(--dark);
+      position: relative;
+      &.offset{
+        width: 95%;
+        padding-left: 0%;
+        @include desktop {
+          padding-left: 12%;
+          width: unset;
+        }
+        ::before{
+          content: '';
+          position: absolute;
+          width: 40%;
+          height: 2px;
+          top: $offset;
+          left: 0%;
+          background: var(--lightBlue);
+          @include desktop {
+            left: -2%;
+          }
+        }
+      }
+      span {
+        color: var(--lightBlue);
+        font-size: 1.1em;
+      }
+    }
+    .btn-scroll {
+      position: absolute;
+      cursor: pointer;
+      right: 3%;
+      min-width: 55px;
+      top: 100%;
+      animation: opacidad 4s infinite;
+      @include tablet {
+        min-width: 65px;
+        right: 1%;
+      }
+      @include desktop {
+        top: 120%;
+        min-width: 65px;
+        right: 0%;
+      }
+    }
+    &.offSet-right {
+      @include desktop {
+        margin-right: 10%;
+      }
+
     }
   }
-  .btn-scroll {
-    position: absolute;
-    cursor: pointer;
-    min-width: 65px;
-    right: 0;
-    top: 120%;
-    animation: opacidad 4s infinite;
-  }
 }
-
