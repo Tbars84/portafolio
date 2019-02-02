@@ -2,23 +2,29 @@
   <div class="blob-2">
     <img src="./assets/blob-2.svg" alt="">
   </div>
+  <div class="blob-3">
+    <img src="./assets/blob-3.svg" alt="">
+  </div>
   <div class="works-contenedor">
     <img class="works-title" src="./assets/works-title.svg" alt="">
     <div class="snippets--works">
-      <!-- tooltip progress -->
-      <div class="item-work">
-        <div class="info-item">
-          <img class="icono-work" src="./assets/works/iconos/wordpress-icon.svg" alt="">
-          <h4>Video Base Experience</h4>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s.
-            <span>2016 -2017</span>
-          </p>
+      <!-- tooltip work -->
+      <ng-template [ngIf]="experienceArr">
+        <div class="item-work" *ngFor="let itemWr of experienceArr; let i= index;">
+          <div class="item-work-wrapper">
+            <div class="info-item">
+              <img class="icono-work" src="{{itemWr.iconUrl}}" alt="">
+              <h4>{{itemWr.name}}</h4>
+              <p>
+                {{itemWr.description}}
+                <span>{{itemWr.season}}</span>
+              </p>
+            </div>
+            <img src="{{itemWr.bgUrl}}" alt="">
+            <div class="img-bg gradientGuard"></div>
+          </div>
         </div>
-        <img src="./assets/works/video-base.jpg" alt="">
-        <div class="img-bg gradientGuard"></div>
-      </div>
+      </ng-template>
     </div>
   </div>
 </section>

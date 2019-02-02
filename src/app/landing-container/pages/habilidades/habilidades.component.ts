@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, Input, AfterViewInit } from '@angular/core';
-import { progressBarItem } from '../../interfaces/landing-interfaces';
+import { progressBarItemIn } from '../../interfaces/landing-interfaces';
 
 @Component({
   selector: 'app-habilidades',
@@ -7,7 +7,7 @@ import { progressBarItem } from '../../interfaces/landing-interfaces';
   styleUrls: ['./habilidades.component.scss']
 })
 export class HabilidadesComponent implements OnInit, AfterViewInit {
-  @Input() itemsArr: progressBarItem[];
+  @Input() itemsArr: progressBarItemIn[];
 
   constructor(private _el: ElementRef) { }
 
@@ -21,11 +21,10 @@ export class HabilidadesComponent implements OnInit, AfterViewInit {
     }
   }
   progressBar(bar, progress ){
-    console.log(bar, progress);
     bar.style.width = `0%`;
     setTimeout(() => {
       const randomTiming = Math.floor((Math.random() * 2) + 2);
-      console.log(randomTiming);
+      // console.log(randomTiming);
       bar.style.transitionDuration = `${randomTiming}s`;
       bar.style.width = `${progress}%`;
     }, 1200);
