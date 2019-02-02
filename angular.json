@@ -28,6 +28,7 @@
             ],
             "styles": [
               "./node_modules/normalize-scss/sass/_normalize.scss",
+              "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss",
               "src/styles.scss"
             ],
             "scripts": []

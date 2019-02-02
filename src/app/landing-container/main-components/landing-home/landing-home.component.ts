@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { progressBarItemIn, experienceIn } from '../../interfaces/landing-interfaces';
 
 @Component({
@@ -26,9 +26,19 @@ export class LandingHome implements OnInit {
   ]
 
 
-  constructor() { }
+  constructor(private _el: ElementRef) { }
 
   ngOnInit() {
+    console.log(this._el.nativeElement.querySelector('.hamburger'));
+    if (this._el.nativeElement.querySelector('.hamburger')) {
+      const menu = this._el.nativeElement.querySelector('.hamburger');
+      this.openMenuSnack(menu);
+    }
+  }
+  openMenuSnack(el){
+    el.addEventListener("click", function () {
+      el.classList.toggle("is-active");
+    });
   }
 
 }
