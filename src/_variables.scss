@@ -19,6 +19,20 @@ $offset: 0.8em;
   --darkGreen: #47D1AC;
   --lightGreen: #74FFDA;
 }
+// MIXINS PARA PROPIEDADES
+@mixin pos-display-absoluto($top, $left, $right, $bottom, $transX, $transY , $index) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  z-index: $index;
+  -ms-transform: translateX($transX) translateY($transY);
+  -moz-transform: translateX($transX) translateY($transY);
+  -webkit-transform: translateX($transX) translateY($transY);
+  transform: translateX($transX) translateY($transY);
+}
+
 // MIXINS PARA RESPONSIVE
 $tablet: 768px;
 $desktop: 1024px;

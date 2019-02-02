@@ -3,25 +3,16 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 372.9 128.4" style="enable-background:new 0 0 372.9 128.4;" xml:space="preserve">
 <style type="text/css">
-	.st0{opacity:0.2;fill:#23A1FF;enable-background:new    ;}
-	.st1{fill:#23A1FF;}
-	.st2{font-family:'Oswald-Medium';}
-	.st3{font-size:141.5963px;}
-	.st4{fill:#171717;}
-	.st5{fill:none;stroke:#23A1FF;stroke-width:2;stroke-miterlimit:10;}
-	.st6{font-size:141.0226px;}
+	.st0{fill:#23A1FF;}
+	.st1{font-family:'Oswald-Medium';}
+	.st2{font-size:141.5963px;}
+	.st3{fill:#171717;}
+	.st4{fill:none;stroke:#23A1FF;stroke-width:2;stroke-miterlimit:10;}
+	.st5{font-size:141.0226px;}
 </style>
+<text transform="matrix(1 0 0 1 71.444 122.1445)" class="st0 st1 st2">S</text>
+<text transform="matrix(1 0 0 1 141.344 122.1445)" class="st3 st1 st2">kills </text>
 <g>
-	<path class="st0" d="M354.4,118.4h-55.5c2.4-1.4,2.6-3.1,0.1-4.9c-4.7-3.4-17.5-6.1-30.6-6.6c-46.2-1.9-65-13.5-120.1-25.2l0,0
-		c-10.2-2.2-23-3.4-35.2-3.1C100,79,90.8,81.1,87.6,83.9l0,0l0,0c0,0-0.1,0-0.1,0.1C76,94,73.4,98,37.2,102.7l0,0
-		c-13.2,1.7-18.9,5.8-12.8,10.2c7.7,5.6,31,9.7,52.2,9.2C80,122,181,121.8,240,121.6h114.6v-3.2H354.4z"/>
-	<path class="st0" d="M339.9,118.4h-55.5c2.4-1.4,2.6-3.1,0.1-4.9c-4.7-3.4-17.5-6.1-30.6-6.6c-46.2-1.9-65-13.5-120.1-25.2l0,0
-		c-10.2-2.2-23-3.4-35.2-3.1c-13.2,0.3-22.4,2.3-25.6,5.2l0,0l0,0c0,0-0.1,0-0.1,0.1C61.5,94,58.9,98,22.7,102.7l0,0
-		c-13.2,1.7-18.9,5.8-12.8,10.2c7.7,5.6,31,9.7,52.2,9.2c3.4-0.1,104.4-0.3,163.4-0.5h114.6v-3.2H339.9z"/>
-</g>
-<text transform="matrix(1 0 0 1 71.444 122.1445)" class="st1 st2 st3">S</text>
-<text transform="matrix(1 0 0 1 141.344 122.1445)" class="st4 st2 st3">kills </text>
-<g>
-	<text transform="matrix(1 0 0 1 68.612 122.0137)" class="st5 st2 st6">S</text>
+	<text transform="matrix(1 0 0 1 68.612 122.0137)" class="st4 st1 st5">S</text>
 </g>
 </svg>

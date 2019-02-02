@@ -17,7 +17,6 @@ export class HabilidadesComponent implements OnInit, AfterViewInit {
       const arrBars = this._el.nativeElement.querySelectorAll('.bar');
       arrBars.forEach(element => {
         this.progressBar(element, element.getAttribute('data-expertise'));
-
       });
     }
   }

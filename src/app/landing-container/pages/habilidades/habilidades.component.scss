@@ -61,4 +61,12 @@ $min-height: calc(100vh - 350px);
       }
     }
   }
+  .blob-1 {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    opacity: 0.2;
+    min-width: 25vw;
+    z-index: 9;
+  }
 }
