@@ -1,0 +1,256 @@
+@import '../../../../variables';
+.hamburger {
+  position: fixed;
+  right: 1px;
+  top: 1px;
+  z-index: 13;
+  outline: none;
+}
+.about-me{
+  visibility: hidden;
+  position: fixed;
+  z-index: 12;
+  width: 100%;
+  height: 100vh;
+  background: rgba(250, 250, 250, 0.7);
+  opacity: 0;
+  transition: 100ms all ease-in-out 100ms;
+  .perfil-contenedor {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    padding: 0%;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+      padding: 0% 15% 0% 0%;
+    }
+    .contenedor--info, .contenedor--imagen {
+          padding: 0% 5%;
+          opacity: 0;
+          min-width: 85%;
+          transition: 520ms all cubic-bezier(.36, .55, .63, .48) 1100ms;
+          @include desktop {
+            min-width: 45%;
+          }
+          img{
+            margin: 0 auto;
+          }
+          h2, p{
+            color: var(--dark);
+            font-size: 0.9em;
+            font-family: $font-fira;
+            letter-spacing: 0.5px;
+            font-weight: 300;
+            margin-bottom: 0%;
+            @include tablet {
+              margin-bottom: 5%;
+            }
+          }
+          p {
+            margin-bottom: 2%;
+            line-height: 1.6em;
+            display: none;
+            @include tablet {
+              display: block;
+              margin-bottom: 10%;
+            }
+          }
+          h2{
+            font-family: $font-oswald;
+            font-size: 2em;
+            @include desktop {
+              font-size: 1.5em;
+            }
+            span {
+              color: var(--lightBlue);
+              font-size: 1.3em;
+            }
+          }
+          a {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--dark);
+            font-family: $font-fira;
+            text-transform: uppercase;
+            border: 2px solid var(--lightBlue);
+            padding: 2% 5%;
+            margin: 0% 3% 0% 0%;
+            transition: 200ms all cubic-bezier(.36, .55, .63, .48);
+            &:hover{
+              background: var(--lightBlue);
+              color: var(--white);
+            }
+          }
+    }
+    .contenedor--info{
+      transform: translateX(-20px);
+      order:2;
+      @include desktop {
+        order:1;
+      }
+      &.intro{
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+    .contenedor--imagen {
+      transform: translateX(20px);
+      order:1;
+      @include desktop {
+        order: 2;
+      }
+      &.intro {
+        opacity: 1;
+        transform: translateX(-20px);
+      }
+    }
+
+    .item-work {
+        perspective: 30px;
+        position: relative;
+        z-index: 10;
+        @include tablet {
+        }
+        .item-work-wrapper {
+          padding: 11px 12px 9px;
+          margin-bottom: 2%;
+          position: relative;
+          transition: transform 0.5s;
+          -webkit-transition: transform 0.5s;
+          transition: 200ms all cubic-bezier(.36, .55, .63, .48);
+
+          .info-item {
+            opacity: 0;
+            font-family: $font-oswald;
+            width: 90%;
+            padding: 0% 2.5%;
+            text-align: center;
+            @include pos-display-absoluto(60%, 50%, auto, auto, -50%, -50%, 11);
+            transition: 250ms all cubic-bezier(.36, .55, .63, .48);
+
+            h4,
+            p {
+              margin: 0;
+              color: var(--white);
+            }
+
+            h4 {
+              font-size: 1.5em;
+              margin-bottom: 2%;
+            }
+
+            p {
+              font-family: $font-fira;
+              font-weight: 400;
+              font-size: 0.8em;
+              -webkit-font-smoothing: antialiased;
+
+              span {
+                display: block;
+                margin-top: 2%;
+              }
+            }
+          }
+
+          img {
+            max-width: 100%;
+            position: relative;
+            z-index: 10;
+            display: block;
+            margin: 0;
+            padding: 0;
+
+            &.icono-work {
+              max-width: 35%;
+              margin-bottom: 5%;
+              margin: 0 auto;
+            }
+          }
+
+          .img-bg {
+            opacity: 0;
+            position: absolute;
+            z-index: 9;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale3d(0.9, 0.9, 0.9);
+            transition: 250ms all cubic-bezier(.36, .55, .63, .48);
+
+            &.gradientGuard {
+              background: #0F4763;
+              background: -moz-linear-gradient(top, #0F4763 0%, #178BE3 53%, #0F4763 100%);
+              background: -webkit-linear-gradient(top, #0F4763 0%, #178BE3 53%, #0F4763 100%);
+              background: linear-gradient(to bottom, #0F4763 0%, #178BE3 53%, #0F4763 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0F4763', endColorstr='#0F4763', GradientType=0);
+            }
+          }
+
+          &:hover {
+            transform: scale3d(1.01, 1.01, 1.01);
+            transition: 250ms all cubic-bezier(.36, .55, .63, .48);
+
+            >.info-item {
+              opacity: 1;
+              top: 58%;
+              transition: 250ms all cubic-bezier(.36, .55, .63, .48);
+            }
+
+            >.img-bg {
+              opacity: 1;
+              transform: scale3d(1, 1, 1);
+              transition: 250ms all cubic-bezier(.36, .55, .63, .48);
+            }
+
+            >img {
+              opacity: 0.4;
+              transition-delay: 2s;
+              transition: 650ms all cubic-bezier(.36, .55, .63, .48);
+            }
+          }
+        }
+      }
+  }
+  .blob-menu {
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 5%;
+    z-index: 9;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: 200ms all ease-in-out 200ms;
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+  .bg-menu{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 8;
+    opacity: 0;
+    transition: 300ms all ease-in-out 300ms;
+    background: var(--white);
+  }
+  &.display {
+    opacity: 1;
+    visibility: visible;
+    transition: 300ms all ease-in-out;
+    >.blob-menu{
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    >.bg-menu{
+      opacity: 1;
+    }
+  }
+
+}

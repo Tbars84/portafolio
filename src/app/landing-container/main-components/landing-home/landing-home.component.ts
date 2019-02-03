@@ -26,19 +26,8 @@ export class LandingHome implements OnInit {
   ]
 
 
-  constructor(private _el: ElementRef) { }
+  constructor() { }
 
-  ngOnInit() {
-    console.log(this._el.nativeElement.querySelector('.hamburger'));
-    if (this._el.nativeElement.querySelector('.hamburger')) {
-      const menu = this._el.nativeElement.querySelector('.hamburger');
-      this.openMenuSnack(menu);
-    }
-  }
-  openMenuSnack(el){
-    el.addEventListener("click", function () {
-      el.classList.toggle("is-active");
-    });
-  }
+  ngOnInit() {}
 
 }

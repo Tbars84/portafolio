@@ -37,8 +37,20 @@ section.section-2 {
       }
       &.invertido{
         order: 2;
+        @include tablet {
+          max-width: unset;
+          order: 1;
+          align-self: flex-start;
+        }
+        @include tablet {
+          max-width: 60%;
+          order: 2;
+        }
         h2 ,p {
-          text-align: right;
+          text-align: center;
+          @include tablet {
+            text-align: right;
+          }
         }
 
       }
@@ -50,7 +62,7 @@ section.section-2 {
       }
       img{
         display: block;
-        z-index: 99;
+        z-index: 10;
         position: relative;
         padding: 0 5%;
         width: 250px;
@@ -59,11 +71,15 @@ section.section-2 {
         }
       }
       &.invertido {
-        order: 1;
+        order: 2;
         padding: 0;
+        @include tablet {
+          width: 680px;
+          order: 1;
+        }
         img {
           @include tablet {
-            width: 380px;
+            width: 350px;
           }
         }
       }

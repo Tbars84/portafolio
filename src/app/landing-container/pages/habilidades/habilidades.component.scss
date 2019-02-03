@@ -21,8 +21,20 @@ $min-height: calc(100vh - 350px);
       min-height: $min-height;
       padding-top: 5%;
       flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+      @include tablet {
+        flex-direction: row;
+        width: auto;
+      }
+
       .barWrapper{
-        min-width: 45%;
+        min-width: 95%;
+        margin-bottom: 5%;
+        @include tablet{
+          min-width: 45%;
+          margin-bottom: 0%;
+        }
         span.progressText{
           color: var(--dark);
           font-family: $font-fira;
@@ -51,10 +63,10 @@ $min-height: calc(100vh - 350px);
             height: 100%;
             transition: 100ms all cubic-bezier(.36, .55, .63, .48);
             &.overlap {
-              background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(42%, #8c2b7a), to(#ff4d5a));
-              background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 42%, #ff4d5a);
-              background-image: -o-linear-gradient(left, #072142, #8c2b7a 42%, #ff4d5a);
-              background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);
+              background-image: -webkit-gradient(linear, left top, right top, from(#74FFDA), color-stop(42%, #178BE3), to(#0F4763));
+              background-image: -webkit-linear-gradient(left, #74FFDA, #178BE3 42%, #0F4763);
+              background-image: -o-linear-gradient(left, #74FFDA, #178BE3 42%, #0F4763);
+              background-image: linear-gradient(to right, #74FFDA, #178BE3 42%, #0F4763);
             }
           }
         }

@@ -24,9 +24,12 @@ $min-height: calc(100vh - 350px);
       flex-wrap: wrap;
       .item-work {
         perspective: 30px;
-        max-width: 35%;
+        max-width: 85%;
         position: relative;
         z-index: 10;
+        @include tablet {
+          max-width: 35%;
+        }
         .item-work-wrapper {
           padding: 11px 12px 9px;
           margin-bottom: 2%;
@@ -84,11 +87,11 @@ $min-height: calc(100vh - 350px);
             transform: scale3d(0.9, 0.9, 0.9);
             transition: 250ms all cubic-bezier(.36, .55, .63, .48);
               &.gradientGuard {
-                background: #072142;
-                background: -moz-linear-gradient(top, #072142 0%, #8c2b7a 53%, #072142 100%);
-                background: -webkit-linear-gradient(top, #072142 0%, #8c2b7a 53%, #072142 100%);
-                background: linear-gradient(to bottom, #072142 0%, #8c2b7a 53%, #072142 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#072142', endColorstr='#072142', GradientType=0);
+                background: #0F4763;
+                background: -moz-linear-gradient(top, #0F4763 0%, #178BE3 53%, #0F4763 100%);
+                background: -webkit-linear-gradient(top, #0F4763 0%, #178BE3 53%, #0F4763 100%);
+                background: linear-gradient(to bottom, #0F4763 0%, #178BE3 53%, #0F4763 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0F4763', endColorstr='#0F4763', GradientType=0);
               }
           }
           &:hover{
