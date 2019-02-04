@@ -99,33 +99,41 @@ p.bold{
   font-weight: 500;
 }
 
-@-webkit-keyframes opacidad {
-  0% {
-    transform: translate3d(0px, 0px, 0px);
-    opacity: 1
-  }
-  30% {
-    transform: translate3d(0px, 0px, 0px);
-    opacity: 1
-  }
-  40% {
-    transform: translate3d(0px, 15px, 80px);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translate3d(0px, 0px, 0px);
-    opacity: 1
-  }
-  60% {
-    transform: translate3d(0px, 0px, 0px);
-    opacity: 1
-  }
-  80% {
-    transform: translate3d(0px, 15px, 80px);
-    opacity: 0.6;
-  }
-  100% {
-    transform: translate3d(0px, 0px, 0px);
-    opacity: 1
+// MIXINS PARA ANIMACION
+@mixin animation-mixin( $nombreAnim ,$opIni, $opFIn , $rebote) {
+  @-webkit-keyframes #{$nombreAnim} {
+    0% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: $opIni
+    }
+    30% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: $opIni
+    }
+    40% {
+      transform: translate3d(0px, $rebote, 80px);
+      opacity: $opFIn;
+    }
+    50% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: $opIni
+    }
+
+    60% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: $opIni
+    }
+    80% {
+      transform: translate3d(0px, $rebote, 80px);
+      opacity: $opFIn;
+    }
+
+    100% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 1
+    }
   }
 }
+
+@include animation-mixin('rebote-regular', 1 , 1, 15px);
+@include animation-mixin('rebote-opacidad', 1, 0.7, 15px);

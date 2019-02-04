@@ -85,6 +85,13 @@ section.section-2 {
           }
         }
       }
+      &.animacion{
+        animation: rebote-regular 5s infinite;
+        z-index: 10;
+        &.invertido {
+          animation: rebote-regular 8s infinite;
+        }
+      }
     }
     &.desc {
       padding-top: 0%;
