@@ -23,7 +23,6 @@ section.section-2 {
       }
       @include desktopLg {
         max-width: 60%;
-        align-self: center;
       }
 
       h1, p, h2{
@@ -43,7 +42,8 @@ section.section-2 {
           align-self: flex-start;
         }
         @include tablet {
-          max-width: 60%;
+          padding-top: 5%;
+          max-width: 55%;
           order: 2;
         }
         h2 ,p {
@@ -58,7 +58,7 @@ section.section-2 {
     .contenedor--imagen{
       position: relative;
       @include tablet {
-        padding-top: 12%;
+        padding: 1% 0%;
       }
       img{
         display: block;
