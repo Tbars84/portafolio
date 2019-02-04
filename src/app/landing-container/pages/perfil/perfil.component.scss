@@ -73,9 +73,11 @@ section.section-2 {
       &.invertido {
         order: 2;
         padding: 0;
+        bottom: -10px;
         @include tablet {
           width: 680px;
           order: 1;
+          bottom: 0px;
         }
         img {
           @include tablet {

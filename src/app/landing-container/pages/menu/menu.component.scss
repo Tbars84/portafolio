@@ -28,10 +28,13 @@
       padding: 0% 15% 0% 0%;
     }
     .contenedor--info, .contenedor--imagen {
-          padding: 0% 5%;
+          padding: 0%;
           opacity: 0;
           min-width: 85%;
           transition: 520ms all cubic-bezier(.36, .55, .63, .48) 1100ms;
+          @include tablet {
+            padding: 0% 5%;
+          }
           @include desktop {
             min-width: 45%;
           }
@@ -60,9 +63,8 @@
           }
           h2{
             font-family: $font-oswald;
-            font-size: 2em;
+            font-size: 1.5em;
             @include desktop {
-              font-size: 1.5em;
             }
             span {
               color: var(--lightBlue);
@@ -154,15 +156,18 @@
               }
             }
           }
-
           img {
-            max-width: 100%;
+            width: 100%;
+            max-width: 280px;
             position: relative;
             z-index: 10;
             display: block;
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
-
+            @include tablet {
+              max-width: unset;
+              margin: 0;
+            }
             &.icono-work {
               max-width: 35%;
               margin-bottom: 5%;
