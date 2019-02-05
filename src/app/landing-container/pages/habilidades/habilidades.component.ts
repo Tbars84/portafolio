@@ -28,15 +28,5 @@ export class HabilidadesComponent implements OnInit, AfterViewInit {
       bar.style.transitionDuration = `${randomTiming}s`;
       bar.style.width = `${progress}%`;
     }, 1200);
-
-    // bar.forEach((bar, index) => {
-    //   bar.style.width = `0%`;
-    //   setTimeout(() => {
-    //     const randomTiming = Math.floor((Math.random() * 2) + 2);
-    //     console.log(randomTiming);
-    //     bar.style.transitionDuration = `${randomTiming}s`;
-    //     bar.style.width = `${progress}%`;
-    //   }, 1200);
-    // })
   }
 }

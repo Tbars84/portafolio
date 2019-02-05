@@ -24,6 +24,23 @@ section.section-2 {
       @include desktopLg {
         max-width: 60%;
       }
+      &.hide-animate{
+        transition: 600ms all ease-in-out;
+        opacity: 0;
+        transform: translate3d(-100%, 0px, 0px);
+        &.invertido{
+          transform: translate3d(100%, 0px, 0px);
+        }
+      }
+      &.show-animate {
+        transition: 600ms all ease-in-out;
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+        &.invertido {
+          transform: translate3d(0%, 0px, 0px);
+        }
+
+      }
 
       h1, p, h2{
         color: var(--white);
