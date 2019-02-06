@@ -63,9 +63,18 @@ section.section-2 {
           max-width: 55%;
           order: 2;
         }
-        h2 ,p {
+        h2 {
           text-align: center;
           @include tablet {
+            text-align: right;
+          }
+        }
+        p{
+          text-align: justify;
+          @include tablet {
+            text-align: center;
+          }
+          @include desktop {
             text-align: right;
           }
         }
