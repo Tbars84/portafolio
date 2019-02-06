@@ -1,0 +1,140 @@
+// IMPORTAR FUENTES
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,700');
+
+$font-oswald: 'Oswald', sans-serif;
+$font-fira: 'Fira Sans Condensed', sans-serif;
+
+$offset: 0.8em;
+:root {
+  --black: #000000;
+  --dark: #171717;
+  --middleDark: #555555;
+  --light: #D3D3D3;
+  --white: #FFFFFF;
+  --blue: #1A82B5;
+  --darkBlue: #0F4763;
+  --lightBlue: #178BE3;
+  --green: #56FFD2;
+  --darkGreen: #47D1AC;
+  --lightGreen: #74FFDA;
+}
+// MIXINS PARA PROPIEDADES
+@mixin pos-display-absoluto($top, $left, $right, $bottom, $transX, $transY , $index) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  z-index: $index;
+  -ms-transform: translateX($transX) translateY($transY);
+  -moz-transform: translateX($transX) translateY($transY);
+  -webkit-transform: translateX($transX) translateY($transY);
+  transform: translateX($transX) translateY($transY);
+}
+
+// MIXINS PARA RESPONSIVE
+$tablet: 768px;
+$desktop: 1024px;
+$desktopLg: 1260px;
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content ;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin desktopLg {
+  @media (min-width: #{$desktopLg}) {
+    @content;
+  }
+}
+
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  font-size: 15px;
+  color: var(--dark);
+  font-weight: 400;
+  overflow-x: hidden;
+  letter-spacing: 0.5px;
+  @include tablet {
+    font-size: 18px;
+  }
+}
+h1, h2, h3, h4{
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+p{
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.5em;
+}
+section {
+  width: 100%;
+  height: auto;
+  min-height: 95vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.al-right{
+    justify-content: flex-end;
+  }
+  &.al-left {
+    justify-content: flex-start;
+  }
+
+}
+p.bold{
+  font-weight: 500;
+}
+
+// MIXINS PARA ANIMACION
+@mixin animation-mixin( $nombreAnim ,$opIni, $opFIn , $rebote) {
+  @-webkit-keyframes #{$nombreAnim} {
+    0% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: $opIni
+    }
+    30% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: $opIni
+    }
+    40% {
+      transform: translate3d(0px, $rebote, 80px);
+      opacity: $opFIn;
+    }
+    50% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: $opIni
+    }
+
+    60% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: $opIni
+    }
+    80% {
+      transform: translate3d(0px, $rebote, 80px);
+      opacity: $opFIn;
+    }
+
+    100% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 1
+    }
+  }
+}
+
+@include animation-mixin('rebote-regular', 1 , 1, 15px);
+@include animation-mixin('rebote-opacidad', 1, 0.7, 15px);

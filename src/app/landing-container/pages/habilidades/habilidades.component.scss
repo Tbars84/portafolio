@@ -1,0 +1,84 @@
+@import '../../../../variables';
+$min-height: calc(100vh - 350px);
+.section-3 {
+  align-items: flex-start;
+  .skills-contenedor {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    min-width: 95%;
+    .skills-title {
+      display: block;
+      min-width: 320px;
+      max-width: 350px;
+      align-self: flex-end;
+    }
+    .desc--skills{
+      display: flex;
+      justify-content: space-around;
+      align-self: center;
+      align-items: center;
+      min-height: $min-height;
+      padding-top: 5%;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+      @include tablet {
+        flex-direction: row;
+        width: auto;
+      }
+
+      .barWrapper{
+        min-width: 95%;
+        margin-bottom: 5%;
+        @include tablet{
+          min-width: 45%;
+          margin-bottom: 0%;
+        }
+        span.progressText{
+          color: var(--dark);
+          font-family: $font-fira;
+          font-size: 1.2em;
+          margin: 1% 0%;
+          display: block;
+          letter-spacing: 0.8px;
+        }
+        span.descText{
+          color: var(--middleDark);
+          font-family: $font-fira;
+          font-size: 0.8em;
+          margin-bottom: 1%;
+          margin-top: -1%;
+
+        }
+        .progress{
+          display: block;
+          width: 100%;
+          height: 15px;
+          border-radius: 40px;
+          background: var(--light);
+          .bar {
+            border-radius: 40px;
+            width: 0%;
+            height: 100%;
+            transition: 100ms all cubic-bezier(.36, .55, .63, .48);
+            &.overlap {
+              background-image: -webkit-gradient(linear, left top, right top, from(#74FFDA), color-stop(42%, #178BE3), to(#0F4763));
+              background-image: -webkit-linear-gradient(left, #74FFDA, #178BE3 42%, #0F4763);
+              background-image: -o-linear-gradient(left, #74FFDA, #178BE3 42%, #0F4763);
+              background-image: linear-gradient(to right, #74FFDA, #178BE3 42%, #0F4763);
+            }
+          }
+        }
+      }
+    }
+  }
+  .blob-1 {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    opacity: 0.2;
+    min-width: 25vw;
+    z-index: 9;
+  }
+}

@@ -1,0 +1,30 @@
+<section id="experience" class="section-4">
+  <div class="blob-2">
+    <img src="./assets/blob-2.svg" alt="">
+  </div>
+  <div class="blob-3">
+    <img src="./assets/blob-3.svg" alt="">
+  </div>
+  <div class="works-contenedor">
+    <img class="works-title" src="./assets/works-title.svg" alt="">
+    <div class="snippets--works">
+      <!-- tooltip work -->
+      <ng-template [ngIf]="experienceArr">
+        <div class="item-work" *ngFor="let itemWr of experienceArr; let i= index;">
+          <div class="item-work-wrapper">
+            <div class="info-item">
+              <img class="icono-work" src="{{itemWr.iconUrl}}" alt="">
+              <h4>{{itemWr.name}}</h4>
+              <p>
+                {{itemWr.description}}
+                <span>{{itemWr.season}}</span>
+              </p>
+            </div>
+            <img src="{{itemWr.bgUrl}}" alt="">
+            <div class="img-bg gradientGuard"></div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>

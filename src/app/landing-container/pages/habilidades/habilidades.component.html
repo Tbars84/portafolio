@@ -1,0 +1,20 @@
+<section id="skills" class="section-3">
+  <div class="blob-1">
+    <img src="./assets/blob-1.svg" alt="">
+  </div>
+  <div class="skills-contenedor">
+    <img class="skills-title" src="./assets/skills-title.svg" alt="">
+    <div class="desc--skills">
+      <!-- tooltip progress -->
+      <ng-template [ngIf]="itemsArr">
+        <div *ngFor="let item of itemsArr; let i= index;" id="html5" class="barWrapper" >
+            <span class="progressText"><b> {{item.name ? (item.name): 'Not specified'}} </b></span>
+            <span class="descText">{{item.description ? (item.description): ''}}</span>
+            <div class="progress">
+              <div class="bar overlap" [attr.data-expertise]="item.expertise"></div>
+            </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>
