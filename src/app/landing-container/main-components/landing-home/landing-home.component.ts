@@ -15,8 +15,10 @@ export class LandingHome implements OnInit, AfterViewInit {
     { name: 'Adobe XD', expertise: '45' },
     { name: 'HTML / CSS', expertise: '85' },
     { name: 'JAVASCRIPT', expertise: '45' },
-    { name: 'ANGULAR / TYPESCRIPT', expertise: '65' },
+    { name: 'ANGULAR 7 / TYPESCRIPT', expertise: '65' },
     { name: 'WORDPRESS', expertise: '80' },
+    { name: 'GITHUB', expertise: '72' },
+    { name: 'JIRA', expertise: '58' },
     { name: 'ENGLISH', expertise: '70', description: 'IELTS certificade' },
   ]
   arrExperience: experienceIn[] = [
@@ -46,7 +48,6 @@ export class LandingHome implements OnInit, AfterViewInit {
     });
 
     window.addEventListener('scroll', function(e){
-      console.log(window.pageYOffset, textSection1.offsetTop, textSection2.offsetTop);
 
       if (window.pageYOffset >= (textSection1.offsetTop - 380)) {
         if (dom.nativeElement.querySelector('.contenedor--info.hide-animate')) {
