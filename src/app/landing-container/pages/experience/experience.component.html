@@ -5,13 +5,13 @@
   <div class="blob-3">
     <img src="./assets/blob-3.svg" alt="">
   </div>
-  <div class="works-contenedor">
+  <div class="works-contenedor" >
     <img class="works-title" src="./assets/works-title.svg" alt="">
     <div class="snippets--works">
       <!-- tooltip work -->
       <ng-template [ngIf]="experienceArr">
         <div class="item-work" *ngFor="let itemWr of experienceArr; let i= index;">
-          <div class="item-work-wrapper">
+          <div class="item-work-wrapper" (click)="moreInfoClicked( itemWr.name ,itemWr.description)"> 
             <div class="info-item">
               <img class="icono-work" src="{{itemWr.iconUrl}}" alt="">
               <h4>{{itemWr.name}}</h4>

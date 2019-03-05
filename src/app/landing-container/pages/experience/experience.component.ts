@@ -1,17 +1,19 @@
 import { Component, OnInit, AfterViewInit, ElementRef, Input } from '@angular/core';
 import { experienceIn } from '../../interfaces/landing-interfaces';
+import swal from'sweetalert2';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrls: ['./experience.component.scss'],
 })
 export class ExperienceComponent implements OnInit, AfterViewInit  {
   @Input() experienceArr: experienceIn[];
   constructor(private _el: ElementRef) { }
+  tituloModal: string = 'Titulo';
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
   ngAfterViewInit() {
     if (this._el.nativeElement.querySelectorAll('.item-work')) {
       const arrItems = this._el.nativeElement.querySelectorAll('.item-work');
@@ -51,6 +53,21 @@ export class ExperienceComponent implements OnInit, AfterViewInit  {
       inner.style.msTransform = style;
       inner.style.oTransform = style;
     };
+  }
+  moreInfoClicked(t , c){
+    swal({
+      position: 'top-end',
+      type: 'info',
+      title: t,
+      html:
+      `<p>
+        ${c}
+      </p>`,
+      showConfirmButton: false,
+      customClass: 'animated flipInX',
+      timer: 2500
+    })
+
   }
 }
 

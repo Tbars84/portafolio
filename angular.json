@@ -29,9 +29,12 @@
             "styles": [
               "./node_modules/normalize-scss/sass/_normalize.scss",
               "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss",
+              "./node_modules/sweetalert2/dist/sweetalert2.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/sweetalert2/dist/sweetalert2.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,7 +90,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "../node_modules/sweetalert2/dist/sweetalert2.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
